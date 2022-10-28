@@ -1,22 +1,19 @@
-import logo from './logo.svg';
+// import'./components/Hero'; 
+import Hero from './components/Hero';
+import Movies from './components/Movies'
 import './App.css';
 
 function App() {
+  const myName = ''
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Hero/>
+        {myName
+        ? <p> Welcome Back</p> //ex: of turnary
+        :<p> Please Login Above.</p>//ex: of turnary
+        }
+     <p> Hello {myName || 'guest'}.</p> 
       </header>
     </div>
   );
